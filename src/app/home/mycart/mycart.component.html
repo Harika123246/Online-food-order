@@ -1,0 +1,74 @@
+<div class="cart-wrapper">
+  <div class="row pt-5 pb-4">
+    <div class="col-md-12 d-flex justify-content-between align-items-center">
+      <h3 class="section-heading">My Cart</h3>
+      <button type="button" class="btn btn-primary" (click)="onCheckOut()" [disabled]="!cartlist?.length">Proceed To Check Out</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 cart-details">
+      <div *ngIf="cartlist && cartlist.length > 0; else noItemsTemplate">
+      <div class="card cart-product-card p-0" *ngFor="let cartitem of cartlist">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="cart-img">
+                <img [src]="cartitem?.imagepath" alt="image" width="125px" height="125px"/>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="cart-product-details">
+                <h4 class="mb-1">{{ cartitem?.name }}</h4>
+                <p class="mb-1 product-desc">{{ cartitem?.description }}</p>
+                <p class="mb-1 product-price">
+                  Price: <span class="fw-bold">{{ cartitem?.price }}</span>
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="quantity-text d-flex align-items-center">
+                    <span class="quantity-head">Quantity:</span>
+                    <input
+                      type="number"
+                      min="1"
+                      class="form-control quantity-input ms-1"
+                      [(ngModel)]="cartitem.quantity"
+                      (ngModelChange)="onQuantityChange(cartitem)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1 d-flex align-items-center">
+              <div class="delete-btn">
+                <img
+                  src="../../../assets/images/icons8-delete.svg"
+                  alt="image"
+                  width="30px"
+                  (click)="deleteCart(cartitem?.id)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noItemsTemplate>
+      <div class="no-items-message">
+        Please add the products
+      </div>
+    </ng-template>
+    </div>
+    <div class="col-md-2 price-details">
+      <div>
+        <h4>Shopping Cart</h4>
+      </div>
+      <br/>
+      <div *ngFor="let cartitem of cartlist">
+        <span>{{ cartitem?.name }}</span> - 
+        <span>${{ cartitem?.price }}</span> x 
+        <span>{{ cartitem?.quantity }}</span>
+      </div>
+      <hr/>
+      <div><b>Total: </b> ${{totalAmount}}</div>
+    </div>
+  </div>
+</div>

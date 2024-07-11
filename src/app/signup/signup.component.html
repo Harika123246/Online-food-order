@@ -1,0 +1,137 @@
+<section class="login-wrapper">
+  <div class="login-container container-fluid top-margin">
+    <div class="row align-items-center pt-5">
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="login-page-img">
+          <img
+            src="../assets/images/login-page.jpg"
+            alt="login-img"
+            width="500px"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="login-form">
+          <form [formGroup]="signupForm">
+            <h3 class="text-center mb-3">Signup</h3>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label mb-1"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+              <span
+                *ngIf="
+                  signupForm.get('username')?.invalid &&
+                  signupForm.get('username')?.touched
+                "
+                class="text-danger"
+              >
+                Minimum 6 charcters required
+              </span>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email id"
+                formControlName="email"
+                required
+              />
+              <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="text-danger">
+                <span *ngIf="signupForm.get('email')?.hasError?.('required')">Email is required</span>
+                <span *ngIf="signupForm.get('email')?.hasError?.('email')">Invalid email format</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="inputPasswor85"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+                placeholder="Password"
+                formControlName="password"
+                required
+              />
+              <span
+                *ngIf="
+                  signupForm.get('password')?.invalid &&
+                  signupForm.get('password')?.touched
+                "
+                class="text-danger"
+              >
+                password is required
+              </span>
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label mb-1"
+                >Confirm Password</label
+              >
+
+              <input
+                type="password"
+                id="inputPassword5"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+                placeholder="Confirm Password"
+                formControlName="confirmpassword"
+                required
+                (keydown.enter)="adduser()"
+              />
+
+              <span
+                *ngIf="
+                  signupForm.get('confirmpassword')?.invalid &&
+                  signupForm.get('confirmpassword')?.touched
+                "
+                class="text-danger"
+              >
+                <span
+                  *ngIf="
+                    signupForm.get('confirmpassword')?.hasError('required')
+                  "
+                  >Confirm Password is required</span
+                >
+                <span
+                  *ngIf="
+                    signupForm.get('confirmpassword')?.hasError('mustMatch')
+                  "
+                  >Passwords must match</span
+                >
+              </span>
+            </div>
+
+            <p class="text-1 mb-2">
+              Do you have an account?
+              <a href="javascript:void(0)" routerLink="/login">Click here</a>
+            </p>
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-login"
+                (click)="adduser()"
+                [disabled]="signupForm.invalid"
+              >
+                Signup
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

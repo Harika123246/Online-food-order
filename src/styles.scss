@@ -1,0 +1,445 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper .main-navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.main-content-wrapper {
+  padding: 3rem 0;
+}
+
+.profile-wrapper .profile-name {
+  font-size: 15px;
+}
+
+.logout-div .dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
+}
+
+.main-navbar .navbar-nav .nav-link.active{
+    font-weight: 600;
+}
+
+.product-card {
+  border-radius: 15px !important;
+}
+
+.product-card:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: ease 0.5s;
+
+}
+
+
+
+.product-card .card-body .card-text {
+  font-size: 12px;
+}
+
+.product-card .product-price {
+  font-weight: 600;
+}
+
+.product-card .btn-wrapper{
+    background-color: black;
+    color: #fff !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 15px 15px
+}
+
+.product-card .btn-wrapper .cart-btn{
+    color: #fff;
+
+}
+
+.cart-btn:active{
+    border: none;
+}
+
+
+.action-btn .edit-btn{
+    border: none;
+    color: blue;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.edit-btn.btn:active{
+    border-color: none !important;
+}
+
+/* add-receipe-css */
+
+.receipe-form .form-control:focus{
+    box-shadow: none;
+}
+
+.receipe-form .form-control::placeholder{
+    font-size: 14px;
+}
+
+.receipe-form .form-label{
+    margin-bottom: 4px;
+}
+
+.back-btn a{
+    color: #000;
+    text-decoration: none;
+
+}
+
+// Login page Styles
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper .main-navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.main-content-wrapper {
+  padding: 3rem 0;
+}
+
+.profile-wrapper .profile-name {
+  font-size: 15px;
+}
+
+.logout-div .dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
+}
+
+.main-navbar .navbar-nav .nav-link.active{
+    font-weight: 600;
+}
+
+.product-card {
+  border-radius: 15px !important;
+}
+
+.product-card:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: ease 0.5s;
+
+}
+
+
+
+.product-card .card-body .card-text {
+  font-size: 12px;
+}
+
+.product-card .product-price {
+  font-weight: 600;
+}
+
+.product-card .btn-wrapper{
+    background-color: black;
+    color: #fff !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 15px 15px
+}
+
+.product-card .btn-wrapper .cart-btn{
+    color: #fff;
+
+}
+
+.cart-btn:active{
+    border: none;
+}
+
+
+.action-btn .edit-btn{
+    border: none;
+    color: blue;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.edit-btn.btn:active{
+    border-color: none !important;
+}
+
+/* add-receipe-css */
+
+.receipe-form .form-control:focus{
+    box-shadow: none;
+}
+
+.receipe-form .form-control::placeholder{
+    font-size: 14px;
+}
+
+.receipe-form .form-label{
+    margin-bottom: 4px;
+}
+
+.back-btn a{
+    color: #000;
+    text-decoration: none;
+
+}
+
+
+/* login-page css */
+
+.login-form .form-control{
+  width: 300px;
+}
+
+.login-form .form-control::placeholder{
+    font-size: 14px;
+}
+
+.login-form .text-1{
+  font-size: 12px;
+}
+
+.login-form .btn-login{
+  background-color: #ff735c;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  padding: 8px;
+}
+
+.btn-login:hover, .btn-loign:active{
+  background-color: #ff735c !important;
+  color: #fff !important;
+
+}
+
+
+//mycart css
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper .main-navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.main-content-wrapper {
+  padding: 3rem 0;
+}
+
+.profile-wrapper .profile-name {
+  font-size: 15px;
+}
+
+.logout-div .dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
+}
+
+.main-navbar .navbar-nav .nav-link.active {
+  font-weight: 600;
+}
+
+.product-card {
+  border-radius: 15px !important;
+}
+
+.product-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: ease 0.5s;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.product-card .card-body .card-text {
+  font-size: 12px;
+}
+
+.product-card .product-price {
+  font-weight: 600;
+}
+
+.product-card .btn-wrapper {
+  background-color: black;
+  color: #fff !important;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.product-card .btn-wrapper .cart-btn {
+  color: #fff;
+}
+
+.cart-btn:active {
+  border: none;
+}
+
+.action-btn .edit-btn {
+  border: none;
+  color: blue;
+  font-size: 12px;
+  padding: 8px;
+}
+
+.edit-btn.btn:active {
+  border-color: none !important;
+}
+
+/* add-receipe-css */
+
+.receipe-form .form-control:focus {
+  box-shadow: none;
+}
+
+.receipe-form .form-control::placeholder {
+  font-size: 14px;
+}
+
+.receipe-form .form-label {
+  margin-bottom: 4px;
+}
+
+.back-btn a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* login-page css */
+
+.login-form .form-control {
+  width: 300px;
+}
+
+.login-form .form-control::placeholder {
+  font-size: 14px;
+}
+
+.login-form .text-1 {
+  font-size: 12px;
+}
+
+.login-form .btn-login {
+  background-color: #ff735c;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  padding: 8px;
+}
+
+.btn-login:hover,
+.btn-loign:active {
+  background-color: #ff735c !important;
+  color: #fff !important;
+}
+
+/* cart-css */
+
+.cart-product-card{
+  border: 1px solid #efefef;
+  border-radius: 15px !important;
+  padding: 10px;
+  margin: 10px;
+  width: 465px;
+  float: left;
+}
+
+.cart-product-card:hover{
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: ease 0.5s;
+}
+
+.cart-img{
+  border-right: 3px solid #d5d4d4;
+}
+
+.cart-product-details p{
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.product-desc{
+  font-size: 10px;
+}
+
+.product-desc, .product-price{
+  color: #4B4950;
+
+}
+
+.quantity-text{
+   font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+// scrollbar styles
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scroll thumb */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #f1f1f1; /* Border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color when hovering */
+}

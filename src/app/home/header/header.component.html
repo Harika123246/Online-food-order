@@ -1,0 +1,63 @@
+<header class="header-wrapper">
+  <nav class="navbar main-navbar navbar-expand-lg bg-body-light p-0 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)" routerLink="/products"
+        ><img src="../assets/images/49620.jpg" alt="logo" width="70px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLinkActive="active"
+              routerLink="/products"
+              aria-current="page"
+              href="javascript:void(0)"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLinkActive="active"
+              routerLink="/mycart"
+              aria-current="page"
+              href="javascript:void(0)"
+              >My Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="ms-auto">
+        <div class="logout-div">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{currentUser?.name | titlecase}}
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/mycart">My Cart</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)" (click)="logout()" >
+                Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

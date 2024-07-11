@@ -1,0 +1,80 @@
+<section class="login-wrapper">
+  <div class="login-container container-fluid top-margin">
+    <div class="row align-items-center pt-5">
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="login-page-img">
+          <img
+            src="../assets/images/login-page.jpg"
+            alt="login-img"
+            width="500px"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="login-form">
+          <form [formGroup]="loginForm">
+            <h3 class="text-center mb-3">Login</h3>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label mb-1"
+                >Username</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="username"
+                formControlName="username"
+                required
+              />
+              <span
+                *ngIf="
+                  loginForm.get('username')?.invalid &&
+                  loginForm.get('username')?.touched
+                "
+              >
+                Minimum 6 charcters required
+              </span>
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="inputPassword5"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+                placeholder="password"
+                formControlName="password"
+                required
+                (keyup.enter)="login()"
+              />
+              <span
+                *ngIf="
+                  loginForm.get('password')?.invalid &&
+                  loginForm.get('password')?.touched
+                "
+              >
+                password is required
+              </span>
+            </div>
+            <p class="text-1 mb-2">
+              Don't have an account?
+              <a href="javascript:void(0)" routerLink="/signup">Click here</a>
+            </p>
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-login"
+                (click)="login()"
+                [disabled]="!loginForm.valid"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+.quantity-input{
+  width: 60px;
+}
+
+.delete-btn{
+  cursor: pointer;
+}
+
+.cart-details {
+  max-height: 600px;
+  overflow: auto;
+}
+
+.price-details {
+  position: fixed;
+  right: -7px;
+  height: 600px;
+  border-left: 5px solid #ddd;
+  padding-left: 20px;
+}
